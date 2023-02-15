@@ -1,15 +1,15 @@
-setInterval(function () {
+
   document.getElementById("numrange").innerHTML = minimum + " - " + maximum;
   minimum = parseInt(document.getElementById("minimum").value);
   maximum = parseInt(document.getElementById("maximum").value);
   usum = document.getElementById("usum").value;
   document.getElementById("points").innerHTML = points
   document.getElementById("strike").innerHTML = strike
-});
 
 
-document.getElementById("maximum").value = 10
-document.getElementById("minimum").value = 0
+
+document.getElementById("maximum").value = 10;
+document.getElementById("minimum").value = 0;
 
 function getRndInteger(minimum, maximum) {
   return Math.floor(Math.random() * (maximum - minimum)) + minimum;
