@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>giftlist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="font.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="bg-dark">
+
+  <header class="container-fluid">
+    <div class="row my-3">
+      <div class="col">
+        <div class="my-2 mx-4">
+          <h3 class="text-light TiltWrap">giftlist</h3>
+        </div>
+      </div>
+      <div class="col">
+        <div class="my-2 mx-4">
+          <h3 class="text-light TiltWrap text-end">My List</h3>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-fluid">
+
+    <div class="row bg-white ms-4 mb-3 rounded-start-4 align-items-center">
+      <div class="col p-0">
+        <h5 class="TiltWrap m-3">3D nyomtató</h5>
+      </div>
+      <div class="col-2 text-center">
+        <div class="me-4">
+          <img src="surce/1.svg" class="icon_status">
+        </div>
+      </div>
+    </div>
+
+    <div class="row bg-white ms-4 mb-3 rounded-start-4 align-items-center">
+      <div class="col p-0">
+        <h5 class="TiltWrap m-3">Elektromos Roller</h5>
+      </div>
+      <div class="col-2 text-center">
+        <div class="me-4">
+          <img src="surce/1.svg" class="icon_status">
+        </div>
+      </div>
+    </div>
+
+    <div class="row bg-white ms-4 mb-3 rounded-start-4 align-items-center">
+      <div class="col p-0">
+        <h5 class="TiltWrap m-3">Oculus Quest 2</h5>
+      </div>
+      <div class="col-2 text-center">
+        <div class="me-4">
+          <img src="surce/2.svg" class="icon_status">
+        </div>
+      </div>
+    </div>
+
+    <div class="row bg-white ms-4 mb-3 rounded-start-4 align-items-center">
+      <div class="col p-0">
+        <h5 class="TiltWrap m-3">Kormány</h5>
+      </div>
+      <div class="col-2 text-center">
+        <div class="me-4">
+          <img src="surce/3.svg" class="icon_status">
+        </div>
+      </div>
+    </div>
+
+    <div class="row bg-white ms-4 mb-3 rounded-start-4 align-items-center">
+      <div class="col p-0">
+        <h5 class="TiltWrap m-3">LEGO® Star Wars™ - Millenium Falcon (75192)</h5>
+      </div>
+      <div class="col-2 text-center">
+        <div class="me-4">
+          
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Add item -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 TiltWrap" id="staticBackdropLabel">Add Item</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="" class="form-label TiltWrap">Item</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--******************************************************************************************************************-->
+
+  <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive"
+    aria-labelledby="offcanvasResponsiveLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title TiltWrap" id="offcanvasResponsiveLabel">Profile</h5>
+      <img src="surce/Close.svg" type="button" class="icon_close" data-bs-dismiss="offcanvas"
+        data-bs-target="#offcanvasResponsive" aria-label="Close"></img>
+    </div>
+    <div class="offcanvas-body">
+      <div class="mb-3">
+        <label for="" class="form-label TiltWrap">Name</label>
+        <h5 class="TiltWrap">Lehotai Ábel</h5>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid fixed-bottom">
+    <div class="row justify-content-center text-center bg-white rounded rounded-4 mx-4 my-4">
+      <div class="col-3">
+        <div class="m-3">
+          <img src="surce/Settings.svg" class="icon" id="settingsBtn">
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="m-3">
+          <img src="surce/List.svg" class="icon" id="listBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="m-3">
+          <img src="surce/User.svg" class="icon" id="userBtn" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

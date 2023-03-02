@@ -1,0 +1,25 @@
+/*icon*/
+
+.icon{
+    height: 22px;
+}
+
+.icon:hover{
+    transform: scale(1.15);
+}
+
+/*icon_close*/
+
+.icon_close{
+    height: 15px;
+}
+
+.icon_close:hover{
+    transform: scale(1.15) rotate(6deg);
+}
+
+/*icon_status*/
+
+.icon_status{
+    height: 12px;
+}
