@@ -2,6 +2,10 @@ body {
   background: #1c1c1c;
 }
 
+#logo{
+  height: 3vh;
+}
+
 #preloader{
   background: #1c1c1c url(surce/logolight.svg)no-repeat center center;
   background-size: 50%;
