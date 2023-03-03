@@ -15,9 +15,13 @@ body {
   z-index: 10000;
 }
 
-.bg-footer {
+#bg-footer {
   background: #1c1c1c;
   box-shadow: 0px 0px 50px 90px rgba(28, 28, 28, 10)
+}
+
+#bg-footer-bar{
+  background-color: #08FFBC;
 }
 
 
