@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GIFTLIST</title>
+  <title>My List | GIFTLIST</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -25,14 +25,21 @@
   <!--Header-->
   <header class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-6">
+      <div class="col-4 text-start">
         <div class="mx-4 my-4">
-          <img src="surce/logolightmini.svg" id="logo"></img>
+          <img src="surce/logolightmini.svg" id="logo" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            aria-controls="offcanvasExample"></img>
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-4 text-center">
+        <div class=" my-4">
+          <h3 class="text-light TiltWrap">My List</h3>
+        </div>
+      </div>
+      <div class="col-4 text-end">
         <div class="mx-4 my-4">
-          <h3 class="text-light TiltWrap text-end">My List</h3>
+          <img src="surce/SettingsGreen.svg" id="settingsBtn" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"></img>
         </div>
       </div>
     </div>
@@ -235,20 +242,65 @@
   </div>
   <!--***************************************************************************************************************-->
 
-  <!--Profile-->
+  <!--Menu-->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <img src="surce/Close.svg" type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="closeBtn"></img>
+      <h5 class="offcanvas-title TiltWrap" id="offcanvasExampleLabel">Menu</h5>
+    </div>
+    <div class="offcanvas-body p-0">
+
+      <div class="row bg-dark ms-4 mb-2 rounded-start-4 align-items-center">
+        <div class="col p-0">
+          <h6 class="TiltWrap text-light m-3">Ábel</h6>
+        </div>
+        <div class="col-2 text-end">
+          <div class="me-4">
+
+          </div>
+        </div>
+      </div>
+
+      <hr class="ms-4" size="3">
+
+      <div class="row bg-dark ms-4 mb-2 rounded-start-4 align-items-center">
+        <div class="col p-0">
+          <h6 class="TiltWrap text-light m-3">Ábel</h6>
+        </div>
+        <div class="col-2 text-end">
+          <div class="me-4">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--***************************************************************************************************************-->
+
+  <!--Settings-->
   <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive"
     aria-labelledby="offcanvasResponsiveLabel">
+
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title TiltWrap" id="offcanvasResponsiveLabel">Profile</h5>
-      <img src="surce/Close.svg" type="button" class="icon_close" data-bs-dismiss="offcanvas"
-        data-bs-target="#offcanvasResponsive" aria-label="Close"></img>
+      <h5 class="offcanvas-title TiltWrap" id="offcanvasResponsiveLabel">Settings</h5>
+      <img src="surce/Close.svg" type="button" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+        aria-label="Close" class="closeBtn"></img>
     </div>
+
     <div class="offcanvas-body">
-      <div class="mb-3">
-        <label for="" class="form-label TiltWrap">Name</label>
-        <h5 class="TiltWrap">Lehotai Ábel</h5>
+     
+    </div>
+
+    <div class="">
+      <div class="fixed-bottom text-end">
+        <div class="mx-3">
+          <h6 class="TiltWrap">Version</h6>
+          <p class="TiltWrap">0.0.1</p>
+        </div>
       </div>
     </div>
+
   </div>
   <!--***************************************************************************************************************-->
 
@@ -258,7 +310,7 @@
     <div class="row justify-content-center text-center rounded rounded-4 mx-4 mb-4 py-1" id="bg-footer-bar">
       <div class="col-3">
         <div class="m-3">
-          <img src="surce/Settings.svg" class="icon" id="settingsBtn">
+          <img src="" class="icon" id="">
         </div>
       </div>
       <div class="col-3">
@@ -268,8 +320,7 @@
       </div>
       <div class="col-3">
         <div class="m-3">
-          <img src="surce/User.svg" class="icon" id="userBtn" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+          <img src="surce/User.svg" class="icon" id="userBtn">
         </div>
       </div>
     </div>
