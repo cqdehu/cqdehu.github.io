@@ -57,7 +57,7 @@ body {
 
 /*closeBtn*/
 .closeBtn{
-  height: 17px;
+  height: 15px;
 }
 
 .closeBtn:hover{
@@ -87,4 +87,12 @@ body {
   background-color: #ffffff;
   border-radius: 0px;
   border: 0px solid #ffffff;
+}
+
+#menu-body{
+  background: #1c1c1c;
+}
+
+#menu-header{
+  background: #1c1c1c;
 }
