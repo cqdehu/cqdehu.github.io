@@ -42,10 +42,10 @@ function addData() {
     if (enterItemName.value != "") {
         var item = enterItemName.value
         var status = enterItemStatus.value
-        var username = enterItemUsername.value
+        //var username = enterItemUsername.value
 
-        database.ref('users').child(username).child(item).set({
-            username: username,
+        database.ref('users').child("Ábel").child(item).set({
+            username: "Ábel",
             item: item,
             status: status,
         })
