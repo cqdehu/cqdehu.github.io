@@ -1,37 +1,54 @@
 /*body*/
 body {
   background: #1c1c1c;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
 /**************************************************************************************/
 
 /*logo*/
-#logo{
+#logo {
   height: 22px;
 }
 
-#logo:hover{
+#logo:hover {
   transform: scale(1.15)
 }
+
 /**************************************************************************************/
 
 /*settingsBtn*/
-#settingsBtn{
+#settingsBtn {
   height: 22px;
 }
-#settingsBtn:hover{
+
+#settingsBtn:hover {
   transform: scale(1.15) rotate(3deg);
 }
+
 /**************************************************************************************/
 
 /*preloader*/
-#preloader{
+#preloader {
   background: #1c1c1c url(surce/logogreen.svg)no-repeat center center;
   background-size: 50%;
   height: 100vh;
   width: 100%;
-  position:fixed;
+  position: fixed;
   z-index: 10000;
 }
+
 /**************************************************************************************/
 
 /*footer*/
@@ -40,9 +57,10 @@ body {
   box-shadow: 0px 0px 50px 75px rgba(28, 28, 28, 10)
 }
 
-#bg-footer-bar{
+#bg-footer-bar {
   background-color: #08FFBC;
 }
+
 /**************************************************************************************/
 
 /*icon*/
@@ -53,16 +71,18 @@ body {
 .icon:hover {
   transform: scale(1.15);
 }
+
 /**************************************************************************************/
 
 /*closeBtn*/
-.closeBtn{
+.closeBtn {
   height: 15px;
 }
 
-.closeBtn:hover{
+.closeBtn:hover {
   transform: scale(1.15) rotate(3deg);
 }
+
 /**************************************************************************************/
 
 
@@ -89,10 +109,14 @@ body {
   border: 0px solid #ffffff;
 }
 
-#menu-body{
+#menu-body {
   background: #1c1c1c;
 }
 
-#menu-header{
+#menu-header {
   background: #1c1c1c;
+}
+
+.item-card {
+  transition: 0.4s;
 }

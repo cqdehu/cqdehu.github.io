@@ -58,7 +58,7 @@ ref.on('value', function (snapshot) {
         var status = item_data["status"]
 
         const newCardDiv = document.createElement("div")
-        newCardDiv.className = "row bg-white ms-4 mb-3 rounded-start-4 align-items-center";
+        newCardDiv.className = "row bg-white ms-4 mb-3 rounded-start-4 align-items-center item-card";
 
         const newItemNameDiv = document.createElement("div")
         newItemNameDiv.className = "col p-0"
