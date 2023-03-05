@@ -48,6 +48,7 @@ window.addEventListener('load', function () {
     loader.style.display = "none"
 })
 
+
 var ref = database.ref('items')
 ref.on('value', function (snapshot) {
     snapshot.forEach(function (get_item) {
@@ -55,10 +56,6 @@ ref.on('value', function (snapshot) {
 
         var item = item_data["item"]
         var status = item_data["status"]
-
-       
-
-        
 
         const newCardDiv = document.createElement("div")
         newCardDiv.className = "row bg-white ms-4 mb-3 rounded-start-4 align-items-center";
@@ -73,8 +70,22 @@ ref.on('value', function (snapshot) {
         const newItemStatusDiv = document.createElement("div")
         newItemStatusDiv.className = "col-2 text-end me-4"
 
+
         const newItemStatus = document.createElement("img")
         newItemStatus.className = "icon_status"
+
+        if (status == 3) {
+            newItemStatus.src = "surce/3.svg"
+        }
+        if (status == 2) {
+            newItemStatus.src = "surce/2.svg"
+        }
+        if (status == 1) {
+            newItemStatus.src = "surce/1.svg"
+        }
+        if (status == 0) {
+            newItemStatus.src = ""
+        }
 
 
         listItems.appendChild(newCardDiv)
@@ -82,12 +93,15 @@ ref.on('value', function (snapshot) {
         newItemNameDiv.appendChild(newItemName)
         newCardDiv.appendChild(newItemStatusDiv)
         newItemStatusDiv.appendChild(newItemStatus)
-        
-        
-        
+
+
+
     })
-    
+
 })
+
+
+
 
 // "surce/3.svg"
 
