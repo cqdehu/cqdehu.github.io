@@ -60,48 +60,54 @@ function addData() {
 
 
 function getData() {
-    firebase.database().ref('users').child('Ábel').once('value', function (snapshot) {
-        snapshot.forEach(function (element) {
-            var item = element.val().item
-            var status = element.val().status
-            const newCardDiv = document.createElement("div")
-            newCardDiv.className = "row bg-white ms-4 mb-3 rounded-start-4 align-items-center item-card";
-
-            const newItemNameDiv = document.createElement("div")
-            newItemNameDiv.className = "col p-0"
-
-            const newItemName = document.createElement("h5")
-            newItemName.className = "TiltWrap m-3"
-            newItemName.innerHTML = item
-
-            const newItemStatusDiv = document.createElement("div")
-            newItemStatusDiv.className = "col-2 text-end me-4"
-
-
-            const newItemStatus = document.createElement("img")
-            newItemStatus.className = "icon_status"
-
-            if (status == 3) {
-                newItemStatus.src = "surce/3.svg"
-            }
-            if (status == 2) {
-                newItemStatus.src = "surce/2.svg"
-            }
-            if (status == 1) {
-                newItemStatus.src = "surce/1.svg"
-            }
-            if (status == 0) {
-                newItemStatus.src = ""
-            }
-
-
-            listItems.appendChild(newCardDiv)
-            newCardDiv.appendChild(newItemNameDiv)
-            newItemNameDiv.appendChild(newItemName)
-            newCardDiv.appendChild(newItemStatusDiv)
-            newItemStatusDiv.appendChild(newItemStatus)
+    firebase.database().ref('active').once('value',function(snap){
+        var user = snap.val().user
+        firebase.database().ref('users').child(user).once('value', function (snapshot) {
+            snapshot.forEach(function (element) {
+                var item = element.val().item
+                var status = element.val().status
+                const newCardDiv = document.createElement("div")
+                newCardDiv.className = "row bg-white ms-4 mb-3 rounded-start-4 align-items-center item-card";
+    
+                const newItemNameDiv = document.createElement("div")
+                newItemNameDiv.className = "col p-0"
+    
+                const newItemName = document.createElement("h5")
+                newItemName.className = "TiltWrap m-3"
+                newItemName.innerHTML = item
+    
+                const newItemStatusDiv = document.createElement("div")
+                newItemStatusDiv.className = "col-2 text-end me-4"
+    
+    
+                const newItemStatus = document.createElement("img")
+                newItemStatus.className = "icon_status"
+    
+                if (status == 3) {
+                    newItemStatus.src = "surce/3.svg"
+                }
+                if (status == 2) {
+                    newItemStatus.src = "surce/2.svg"
+                }
+                if (status == 1) {
+                    newItemStatus.src = "surce/1.svg"
+                }
+                if (status == 0) {
+                    newItemStatus.src = ""
+                }
+    
+    
+                listItems.appendChild(newCardDiv)
+                newCardDiv.appendChild(newItemNameDiv)
+                newItemNameDiv.appendChild(newItemName)
+                newCardDiv.appendChild(newItemStatusDiv)
+                newItemStatusDiv.appendChild(newItemStatus)
+            })
         })
     })
+
+
+    
 }
 
 getData()

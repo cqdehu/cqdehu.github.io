@@ -23,6 +23,9 @@ function login(){
     firebase.database().ref('accounts').once('value', function (snapshot) {
         snapshot.forEach(function (element) {
             if(enterName.value == element.val().username && enterPassword.value == element.val().password){
+                database.ref('active').set({
+                    user: enterName.value
+                })
                 window.open("/mylist.html","_self")
             }
         })
@@ -40,6 +43,3 @@ window.addEventListener('load', function () {
 })
 
 //
-database.ref('urls').child("mylist").set({
-    url: ""
-})
