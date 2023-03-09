@@ -38,26 +38,31 @@ const listItems = document.querySelector('#listItems')
 //**********************************************
 createNewCard.addEventListener("click", addData)
 
+
+firebase.database().ref('active').once('value',function(snaps){
+    var user = snaps.val().user
+    console.log(user)
+})
+
 function addData() {
     if (enterItemName.value != "") {
         var item = enterItemName.value
         var status = enterItemStatus.value
-        //var username = enterItemUsername.value
+        var username = enterItemUsername.value
+        
 
-        database.ref('users').child("Ábel").child(item).set({
-            username: "Ábel",
+        database.ref('users').child(username).child(item).set({
+            username: username,
             item: item,
             status: status,
         })
-
+        
         location.reload(getData)
-
 
     }
 
 }
 //************************************************
-
 
 function getData() {
     firebase.database().ref('active').once('value',function(snap){
